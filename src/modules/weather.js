@@ -1,4 +1,5 @@
 const weather =(() => {
+    // destructure data object to extract specific pieces of information
     function convert(data) {
          const {
             current: {
@@ -21,11 +22,12 @@ const weather =(() => {
          return {tempC, feelC, humid, uvIndex, vis, wind, windDir, num, image, description, cityName, cityCountry, cityTime}
     }
 
+    // fetches data from api. handles error if city not found
     async function getData(city) {
         const link = `https://api.weatherapi.com/v1/current.json?key=c98e04155ec64d899fe04126232108&q=${city}`;
         try {
             const response = await fetch(link, { mode: "cors"} );
-            if (!response.ok) throw new Error ('${city} not found.');
+            if (!response.ok) throw new Error (`${city} not found.`);
             return convert(await response.json());
         }
         catch(error) {

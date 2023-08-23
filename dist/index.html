@@ -10,21 +10,25 @@
     <div id="content">
         <div id="main">
             <form class="form" id="search" novalidate>
-                <input type="text" id="search" placeholder="Search... e.g. 'New York City'"/>
+                <input type="text" id="search-input" placeholder="Search... e.g. 'New York City'"/>
             </form>
             <!-- top half content -->
             <div id="top">
                 <div class="left" id="top-left">
                     <div id="city"></div>
+                    <div id="gap"></div>
                     <div id="country"></div>
                     <div id="time"></div>
-                    <div id="gap"></div>
-                    <div id="temperature">=</div>
-                    <div id="feels"></div>
                 </div>
 
                 <div class="right" id="top-right">
-                    <img src="#" id="icon" alt="conditions">
+                    <div id="temp-and-icon">
+                        <img src="#" id="icon" alt="conditions">
+                        <div id="temps">
+                            <div id="temperature">=</div>
+                            <div id="feels"></div>
+                        </div>
+                    </div>
                     <div id="condition"></div>
                 </div>
             </div>
@@ -34,12 +38,24 @@
             <!-- bottom half content -->
             <div id="bottom">
                 <div class="left" id="bottom-left">
-                    <div id="uv"></div>
-                    <div id="vis"></div>
+                    <div class="infobox" id="uvbox">
+                        <div id="uvtext">UV:</div>
+                        <div id="uv"></div>
+                    </div>
+                    <div class="infobox" id="visbox">
+                        <div id="vistext">Visibility:</div>
+                        <div id="vis"></div>
+                    </div>
                 </div>
                 <div class="right" id="bottom-right">
-                    <div id="wind"></div>
-                    <div id="humidity"></div>
+                    <div class="infobox" id="windbox">
+                        <div id="windtext">Wind:</div>
+                        <div id="wind"></div>
+                    </div>
+                    <div class="infobox" id="humbox">
+                        <div id="humiditytext">Humidity:</div>
+                        <div id="humidity"></div>
+                    </div>
                 </div>
             </div>
         </div>
