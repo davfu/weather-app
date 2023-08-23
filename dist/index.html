@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="content">
+        <div id="main">
+            <form class="form" id="search" novalidate>
+                <input type="text" id="search" placeholder="Search... e.g. 'New York City'"/>
+            </form>
+            <!-- top half content -->
+            <div id="top">
+                <div class="left" id="top-left">
+                    <div id="city"></div>
+                    <div id="country"></div>
+                    <div id="time"></div>
+                    <div id="gap"></div>
+                    <div id="temperature">=</div>
+                    <div id="feels"></div>
+                </div>
+
+                <div class="right" id="top-right">
+                    <img src="#" id="icon" alt="conditions">
+                    <div id="condition"></div>
+                </div>
+            </div>
+
+            <hr id="divider">
+
+            <!-- bottom half content -->
+            <div id="bottom">
+                <div class="left" id="bottom-left">
+                    <div id="uv"></div>
+                    <div id="vis"></div>
+                </div>
+                <div class="right" id="bottom-right">
+                    <div id="wind"></div>
+                    <div id="humidity"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
